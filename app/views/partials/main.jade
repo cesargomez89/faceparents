@@ -1,0 +1,71 @@
+div(ng-include='\'partials/navbar\'')
+
+.jumbotron(ng-hide='currentUser')
+  h1 Aplicacion para control parental de facebook
+.container(ng-show='currentUser', ng-controller='MainCtrl')
+  ul.nav.nav-pills
+    li.active
+      a#profile-tab(href='#profile', data-toggle='tab')
+        | Profile
+    li
+      a#friends-tab(href='#friends', data-toggle='tab') Friend Requests
+    li
+      a#filter-tab(href='#filter', data-toggle='tab')
+        | Words Filter
+        span.badge 3
+  .tab-content
+    .tab-pane.fade.in.active#profile(style='margin-top: 10px;')
+      .row
+        .col-md-4
+          img.img-circle(data-src='holder.js/140x140', alt='140x140', src='images/yeoman.png', style='width: 140px; height: 140px;')
+        .col-md-8
+          span
+            strong Name:
+            | Pedro Munguia
+    .tab-pane.fade#friends(style='margin-top: 10px;')
+      .row
+        |no se :)
+    .tab-pane.fade#filter(style='margin-top: 10px;')
+      .row
+        ul.media-list
+          li.media
+            a.pull-left(href='#')
+            img.media-object(data-src='holder.js/64x64', alt='64x64', src='images/yeoman.png', style='width: 64px; height: 64px;')
+          .media-body
+            h4.media-heading Media heading
+            p
+              | Cras sit 
+              strong(style='color: red') amet nibh libero,
+              |in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.
+              |Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+            .media
+              a.pull-left(href='#')
+                img.media-object(data-src='holder.js/64x64', alt='64x64', src='images/yeoman.png', style='width: 64px; height: 64px;')
+              .media-body
+                h4.media-heading Nested media heading
+                | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                |sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                .media
+                  a.pull-left(href='#')
+                  img.media-object(data-src='holder.js/64x64', alt='64x64', src='images/yeoman.png', style='width: 64px; height: 64px;')
+                .media-body
+                  h4.media-heading Nested media heading
+                  | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                  |scelerisque ante sollicitudin commodo. Cras purus odio, 
+                  |vestibulum in vulputate at, tempus viverra turpis.
+                .media
+                  a.pull-left(href='#')
+                  img.media-object(data-src='holder.js/64x64', alt='64x64', src='images/yeoman.png', style='width: 64px; height: 64px;')
+                  .media-body
+                    h4.media-heading Nested media heading
+                    | Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                    |scelerisque ante sollicitudin commodo. Cras purus odio,
+                    |vestibulum in vulputate at, tempus viverra turpis.
+          li.media
+            a.pull-right(href='#')
+            img.media-object(data-src='holder.js/64x64', alt='64x64', src='images/yeoman.png', style='width: 64px; height: 64px;')
+            .media-body
+              h4.media-heading Media heading
+              | Cras sit amet nibh libero, in gravida nulla. Nulla vel 
+              |metus scelerisque ante sollicitudin commodo. Cras purus odio,
+              |vestibulum in vulputate at, tempus viverra turpis.
